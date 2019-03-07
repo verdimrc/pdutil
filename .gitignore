@@ -1,0 +1,15 @@
+# Jupyter notebook's checkpoints
+.ipynb_checkpoints
+
+.c9/
+~$*
+.DS_Store
+.*.swp
+*.swp
+*.pyc
+__pycache__/
+MANIFEST
+*.egg-info
+*.egg
+dist/
+build/
