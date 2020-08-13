@@ -10,6 +10,12 @@ import re
 
 ALPHANUMERIC_REGEXP = re.compile(r'[0-9a-zA-Z]')
 
+def read_csv_as_str(*args, **kwargs):
+    """Read .csv but return contenst as-is string, i.e., no dtype conversion and nan treatment."""
+    kwargs['dtype'] = str
+    kwargs['na_filter'] = False
+    return pd.read_csv(*args, **kwargs)
+
 
 def check_all(df, max_value_to_show=10):
     """Perform check_columns() and check_datapoints_dtype()."""
